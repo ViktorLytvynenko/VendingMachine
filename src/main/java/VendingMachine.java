@@ -56,7 +56,7 @@ public class VendingMachine {
     public static void putCash(double productPrice, int choiceQuantity) {
         double requiredSum = productPrice * choiceQuantity;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Put please $" + requiredSum + " into the vending machine");
+        System.out.println("Put please $" + (Math.round(requiredSum * 100) / 100.0) + " into the vending machine");
 
         double cash = 0.0;
         do {
